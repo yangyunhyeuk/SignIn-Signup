@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 웹 접근성을 향상시키기 위해 언어코드를 한국어로 지정-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HAH👩🏻‍🚀_Login</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="shortcut icon" href="img/data.ico" type="image/x-icon">
+<!-- css 파일 임포트 -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 제이쿼리 사용을 위해 임포트 -->
+
+</head>
+<body>
+
+
+
+	<div class="wrap">
+		<div class="form-wrap">
+			<div class="button-wrap">
+				<div id="btn"></div>
+				<button type="button" class="togglebtn" id="on" onclick="login()">로그인</button> <!--  스크롤 조절을 위한 id 값 on -->
+				<button type="button" class="togglebtn" id="off" onclick="register()">회원가입</button> <!--  스크롤 조절을 위한 id 값 off -->
+			</div>
+
+		<!-- 전체적인 폼 내에서 유효성 검사를 거치기 위해 id값 설정 -->
+
+			<form id="login" action="" class="input-group">
+				<input type="text" class="input-field" id="idCheck"
+					placeholder="아이디">
+				<!-- 다양한 활용을 위해 required와 자바스크립트를 통해 공백 유효성검사를 해주었다.  -->
+				<input type="password" class="input-field" id="pwCheck"
+					placeholder="비밀번호" required> <input type="checkbox"
+					class="checkbox"> <span>로그인 상태 유지</span>
+				<button class="submit" id="logCheck">로그인</button>
+			</form>
+			<form id="register" action="" class="input-group">
+				<input type="text" class="input-field" name="uid" id="uid"
+					placeholder="아이디"> <br>
+
+				<button type="button" id="btTest">중복확인</button>
+				<br>
+				<br> <input type="password" class="input-field password"
+					name="pwd" id="pwd"
+					placeholder="비밀번호&emsp;&emsp;&emsp;&emsp;영문자+숫자+특수문자 조합"><br>
+				<input type="password" class="input-field password" name="repwd"
+					id="repwd" placeholder="비밀번호 확인"><br> <input
+					type="tel" class="input-field" name="mobile" id="mobile"
+					placeholder="전화번호&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;010-0000-0000">
+				<br>
+				<input type="email" class="input-field" name="email" id="email"
+					placeholder="이메일"> <br> <br> <br>
+				<li class="checkBox">
+					<ul class="clearfix">
+					</ul> <textarea name="" id="" readonly>&#10;코리아IT아카데미 개발자 과정을 이용해 주셔서 감사합니다.&#10;&#10;지금 공부 안 하면 더울 때 더운 데서 일하고 추울 때 추운 데서 일한다. 늦었다고 생각할 때가 늦었다. “내 너 그럴 줄 알았다” 알았으면 제발 미리 말 해줘라. 어려운 길은 길이 아니다. 즐길 수 없으면 피하라. 내일도 할 수 있는 일을 굳이 오늘 할 필요 없다. 가는 말이 고우면 얕본다. 참을 인 세 번이면 호구. 원수는 회사에서 만난다. 감사의 표시는 돈으로 해라. 선배는 입 닫고 지갑을 열어라. 티끌모아 티끌이다.&#10;&#10;본 약관은 여러분들의 인생에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.</textarea>
+				</li>
+
+				<div id="service">
+					<input type='checkbox' value='Y' class='checkbox' name='agree'
+						id='agree'> <span>약관 동의 (필수)</span>
+				</div>
+				<button class="submit" id="confirm">회원가입</button>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// 위에서 순차적으로 코드를 읽어내려가는 웹 브라우저 특성상 정상작동을 하기 위해 코드를 먼저 작성한 뒤 작성한다. 
+		$(document).ready(function() { // 스크롤이 필요한 경우에만 명시되도록 설정 
+
+			$("#on").click(function() { // id가 on인 태그 클릭 시 수행
+				$(".form-wrap").css("overflow", "hidden");
+			});
+			$("#off").click(function() { // id가 off인 태그 클릭 시 수행
+				$(".form-wrap").css("overflow", "scroll");
+
+			});
+
+		});
+
+		var x = document.getElementById("login");
+		var y = document.getElementById("register");
+		var z = document.getElementById("btn");
+
+		function login() { // 클릭 시 위치 설정
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0";
+		}
+
+		function register() { // 클릭 시 위치 설정
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+	</script>
+	
+	<script src="js/login.js"></script>
+	<!-- js 파일 임포트 -->
+
+</body>
+</html>

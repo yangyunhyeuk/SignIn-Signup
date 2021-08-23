@@ -1,0 +1,32 @@
+@charset "UTF-8";
+#home {
+	margin: 10px;
+	float: right;
+}
+
+#home a {
+	font-family: "Paytone One";
+	color: #FFFEED;
+	font-size: 30px;
+}
+
+#content h4 {
+	font-size: 50px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+#content span {
+	font-size: 25px;
+	font-weight: bold;
+	background: linear-gradient(to top, #FFF22D 40%, transparent 40%);
+}
+
+#content a {
+	font-size: 20px;
+	font-style: italic;
+}
+
+#content a:hover {
+	background: linear-gradient(to top, #FF4A2D 20%, transparent 20%);
+}
